@@ -9,6 +9,7 @@
     --primary-color: #3498db;
     --secondary-color: #2c3e50;
     --accent-color: #e74c3c;
+    --highlight-color: #ffd700;
     --text-color: #333;
     --text-light: #666;
     --bg-color: #fff;
@@ -108,7 +109,7 @@ body {
 }
 
 .highlight {
-    color: #ffd700;
+    color: var(--highlight-color);
 }
 
 .hero-subtitle {

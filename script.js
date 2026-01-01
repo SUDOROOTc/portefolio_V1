@@ -56,22 +56,30 @@ const contactForm = document.getElementById('contactForm');
 contactForm.addEventListener('submit', function(e) {
     e.preventDefault();
     
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
     
     // Validation simple
     if (name && email && message) {
         // Simuler l'envoi du message
-        alert('Merci pour votre message ! Je vous répondrai dans les plus brefs délais.');
+        // Afficher un message de succès
+        const submitButton = contactForm.querySelector('button[type="submit"]');
+        const originalText = submitButton.textContent;
+        submitButton.textContent = '✓ Message envoyé !';
+        submitButton.style.backgroundColor = '#27ae60';
+        
         contactForm.reset();
-    } else {
-        alert('Veuillez remplir tous les champs du formulaire.');
+        
+        // Restaurer le bouton après 3 secondes
+        setTimeout(() => {
+            submitButton.textContent = originalText;
+            submitButton.style.backgroundColor = '';
+        }, 3000);
     }
 });
 
 // Changement de la navbar au scroll
-let lastScroll = 0;
 const navbar = document.querySelector('.navbar');
 
 window.addEventListener('scroll', () => {
@@ -82,28 +90,7 @@ window.addEventListener('scroll', () => {
     } else {
         navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
     }
-    
-    lastScroll = currentScroll;
 });
-
-// Effet de typing pour le titre (optionnel)
-const heroTitle = document.querySelector('.hero-title');
-if (heroTitle) {
-    const text = heroTitle.innerHTML;
-    heroTitle.innerHTML = '';
-    let i = 0;
-    
-    function typeWriter() {
-        if (i < text.length) {
-            heroTitle.innerHTML += text.charAt(i);
-            i++;
-            setTimeout(typeWriter, 50);
-        }
-    }
-    
-    // Décommenter la ligne suivante pour activer l'effet de typing
-    // typeWriter();
-}
 
 // Ajouter une animation au survol des liens de navigation
 document.querySelectorAll('.nav-link').forEach(link => {
@@ -116,22 +103,9 @@ document.querySelectorAll('.nav-link').forEach(link => {
     });
 });
 
-// Compteur d'animations pour les chiffres (si vous voulez ajouter des stats)
-function animateCounter(element, target, duration = 2000) {
-    let start = 0;
-    const increment = target / (duration / 16);
-    
-    const timer = setInterval(() => {
-        start += increment;
-        if (start >= target) {
-            element.textContent = target;
-            clearInterval(timer);
-        } else {
-            element.textContent = Math.floor(start);
-        }
-    }, 16);
-}
-
 // Console message
 console.log('%c👋 Bienvenue sur mon portfolio!', 'color: #3498db; font-size: 20px; font-weight: bold;');
 console.log('%c💼 Développeur Web passionné', 'color: #2c3e50; font-size: 14px;');
+
+// Set current year in footer
+document.getElementById('currentYear').textContent = new Date().getFullYear();
