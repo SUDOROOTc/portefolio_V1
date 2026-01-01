@@ -1,0 +1,5 @@
+{
+  "schedule": "weekly",
+  "ignoredExtensions": [".mp4", ".pdf"],
+  "aggressive": true
+}
