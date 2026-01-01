@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DJOBO Cherif | Développeur Full Stack & Génie Logiciel</title>
+    <meta name="description"
+        content="Portfolio de DJOBO BOUKARI Amed Cherif, Développeur Full Stack spécialisé en PHP, Python, et Flutter.">
+    <link rel="stylesheet" href="style2.css">
+    <!-- Google Fonts: Outfit pour les titres, Inter pour le corps -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Header / Navigation -->
+    <header class="header">
+        <a href="#" class="logo">DJOBO<span class="dot">.</span></a>
+
+        <nav class="navbar" id="navbar">
+            <a href="#accueil" class="active">Accueil</a>
+            <a href="#a-propos">Expertise</a>
+            <a href="#projets">Projets</a>
+            <a href="#videos">Démos</a>
+            <a href="#certifications">Certifications</a>
+            <a href="#contact" class="nav-cta">Me Contacter</a>
+        </nav>
+
+        <div class="menu-icon" id="menu-icon">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <!-- Accueil / Hero Section -->
+    <section class="accueil" id="accueil">
+        <div class="accueil-container">
+            <div class="accueil-content scroll-reveal">
+                <span class="badge">Disponible pour des opportunités</span>
+                <h1>Construisons des expériences <br> <span class="accent-text">Web & Mobile</span> d'exception.</h1>
+                <p class="role-description">
+                    Je suis <strong>DJOBO BOUKARI Amed Cherif</strong>, étudiant en 2ème année de Génie Logiciel.
+                    Passionné par la tech et avide de progression, je transforme chaque défi en une solution
+                    <strong>innovante</strong>.
+                </p>
+
+                <div class="cta-group">
+                    <a href="#projets" class="btn primary-btn">Voir mes travaux <i class="fas fa-arrow-right"></i></a>
+                    <a href="#contact" class="btn secondary-btn">Me contacter</a>
+                </div>
+
+                <div class="social-hero">
+                    <a href="https://github.com/SUDOROOTc" target="_blank" aria-label="GitHub"><i
+                            class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/cherifAmed/" target="_blank" aria-label="LinkedIn"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a href="mailto:votre.djoboboukari35@gmail.com" aria-label="Email"><i
+                            class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+
+            <div class="accueil-image scroll-reveal">
+                <div class="photo-wrapper">
+                    <img src="assets/img/photo_cv2.jpg" alt="DJOBO Cherif">
+                </div>
+            </div>
+        </div>
+        <!-- Optionnel: Ajouter une illustration ou une forme abstraite ici en CSS -->
+        <div class="hero-shape"></div>
+    </section>
+
+    <!-- Section Expertise (A Propos & Stack) -->
+    <section class="a-propos" id="a-propos">
+        <div class="section-header scroll-reveal">
+            <h2 class="heading">Mon <span class="accent-text">Expertise</span></h2>
+            <p class="sub-heading">Une approche technique rigoureuse couplée à une sensibilité UX.</p>
+        </div>
+
+        <div class="skills-grid scroll-reveal">
+            <div class="skill-card">
+                <div class="icon-box"><i class="fas fa-code"></i></div>
+                <h3>Front-End</h3>
+                <p>Création d'interfaces réactives et modernes.</p>
+                <div class="tech-icons">
+                    <i class="fab fa-html5" title="HTML5"></i>
+                    <i class="fab fa-css3-alt" title="CSS3"></i>
+                    <i class="fab fa-js" title="JavaScript"></i>
+                    <!-- Note: Flutter icon might not be standard in basic FA free set, using React as placeholder or custom if needed. Let's use generic mobile or just mobile icon if Flutter missing, but FA6 usually has it. -->
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <div class="icon-box"><i class="fas fa-server"></i></div>
+                <h3>Back-End</h3>
+                <p>Logique serveur robuste et gestion de données.</p>
+                <div class="tech-icons">
+                    <i class="fab fa-php" title="PHP"></i>
+                    <i class="fab fa-python" title="Python"></i>
+                    <i class="fas fa-database" title="SQL"></i>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <div class="icon-box"><i class="fas fa-tools"></i></div>
+                <h3>DevOps & Outils</h3>
+                <p>Optimisation du workflow et déploiement.</p>
+                <div class="tech-icons">
+                    <i class="fab fa-git-alt" title="Git"></i>
+                    <i class="fab fa-github" title="GitHub"></i>
+                    <i class="fas fa-terminal" title="Terminal"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Projets (Déployés / Majeurs) -->
+    <section class="projets" id="projets">
+        <div class="section-header scroll-reveal">
+            <h2 class="heading">Projets <span class="accent-text">Phares</span></h2>
+            <p class="sub-heading">Une sélection de mes travaux, dont certains sont en cours de développement. Pour les
+                projets non encore déployés, des démonstrations vidéo sont disponibles ci-dessous.</p>
+        </div>
+
+        <div class="projets-container">
+
+            <!-- Projet 1: Ousmane Shop -->
+            <article class="projet-card scroll-reveal">
+                <div class="card-image">
+                    <img src="assets/img/ousmane_shop_apercu.png" alt="Aperçu du site Ousmane Shop">
+                </div>
+                <div class="card-content">
+                    <div class="card-meta">E-commerce • Site Vitrine</div>
+                    <h3>Ousmane Shop</h3>
+                    <p>Site vitrine moderne conçu pour présenter les produits et l'activité d'une boutique locale.</p>
+                    <div class="tags">
+                        <span>HTML5</span><span>CSS3</span><span>JS</span>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://sudorootc.github.io/OUSSMANE_SHOP/index.html" target="_blank"
+                            class="btn-text">Voir le Site <i class="fas fa-external-link-alt"></i></a>
+                        <a href="https://github.com/SUDOROOTc/OUSSMANE_SHOP" target="_blank" class="icon-link"
+                            aria-label="Voir le code"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Projet 2: Diaspora Holding -->
+            <article class="projet-card scroll-reveal">
+                <div class="card-image">
+                    <img src="assets/img/apercu_diaspora_holding.png" alt="Aperçu de Diaspora Holding Livraison">
+                </div>
+                <div class="card-content">
+                    <div class="card-meta">Logistique • Web App</div>
+                    <h3>Diaspora Holding Livraison</h3>
+                    <p>Plateforme complète de gestion de livraisons avec suivi en temps réel et rôles utilisateurs
+                        multiples.</p>
+                    <div class="tags">
+                        <span>PHP</span><span>MySQL</span><span>JS</span>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://github.com/SUDOROOTc" target="_blank" class="icon-link"
+                            aria-label="Voir le code"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Projet 3: SmartScan -->
+            <article class="projet-card scroll-reveal">
+                <div class="card-image">
+                    <img src="assets/img/appercu_smart_scan.png" alt="Aperçu de SmartScan">
+                </div>
+                <div class="card-content">
+                    <div class="card-meta">Data • Automation</div>
+                    <h3>SmartScan</h3>
+                    <p>Outil d'extraction de données via OCR et IA pour automatiser la saisie de bon de livraisons.</p>
+                    <div class="tags">
+                        <span>Python</span><span>OCR</span><span>API</span><span>PHP</span><span>MySQL</span>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://github.com/SUDOROOTc" target="_blank" class="icon-link"
+                            aria-label="Voir le code"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Projet 4: Notly -->
+            <article class="projet-card scroll-reveal">
+                <div class="card-image">
+                    <img src="assets/img/apercu_notly.png" alt="Aperçu de Notly">
+                </div>
+                <div class="card-content">
+                    <div class="card-meta">Productivité • PWA</div>
+                    <h3>Notly</h3>
+                    <p>Application de prise de notes mobile-first avec synchronisation offline/online.</p>
+                    <div class="tags">
+                        <span>PWA</span><span>JS</span><span>PHP</span>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://github.com/SUDOROOTc" target="_blank" class="icon-link"
+                            aria-label="Voir le code"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- [NEW] Section Vidéos / Démos -->
+    <section class="videos" id="videos">
+        <div class="section-header scroll-reveal">
+            <h2 class="heading">Démos & <span class="accent-text">Prototypes</span></h2>
+            <p class="sub-heading">Exploration de concepts et applications en cours de développement.</p>
+        </div>
+
+        <div class="video-grid scroll-reveal">
+            <!-- Vidéo 1: SmartScan -->
+            <div class="video-card">
+                <div class="video-wrapper">
+                    <video controls poster="assets/img/placeholder_poster.jpg">
+                        <source src="assets/video/smartscan_demo.mp4" type="video/mp4">
+                        Votre navigateur ne supporte pas la vidéo.
+                    </video>
+                </div>
+                <div class="video-info">
+                    <h3>SmartScan AI</h3>
+                    <p>Outil d'automatisation via OCR et Intelligence Artificielle pour la saisie de documents.</p>
+                </div>
+            </div>
+
+            <!-- Vidéo 2: Fespaco -->
+            <div class="video-card">
+                <div class="video-wrapper">
+                    <video controls poster="assets/img/placeholder_poster.jpg">
+                        <source src="assets/video/apercu_fespaco.mp4" type="video/mp4">
+                        Votre navigateur ne supporte pas la vidéo.
+                    </video>
+                </div>
+                <div class="video-info">
+                    <h3>Fespaco</h3>
+                    <p>Application de gestion et de promotion pour le festival de cinéma africain.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Certifications -->
+    <section class="certifications" id="certifications">
+        <div class="section-header scroll-reveal">
+            <h2 class="heading">Certification & <span class="accent-text">Diplômes</span></h2>
+        </div>
+
+        <div class="certifications-container scroll-reveal">
+            <div class="certif-item">
+                <div class="certif-icon"><i class="fab fa-python"></i></div>
+                <div class="certif-details">
+                    <h3>Développement python niveau intermediare a avancé</h3>
+                    <p class="certif-source">Udemy • 2024</p>
+                    <a href="assets/img/certification_udemy_python.jpg" target="_blank" class="link-small">Voir le
+                        certificat <i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+
+            <div class="certif-item">
+                <div class="certif-icon"><i class="fas fa-university"></i></div>
+                <div class="certif-details">
+                    <h3>Licence 2 Génie Informatique</h3>
+                    <p class="certif-source">Université / École • En cours</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section class="contact" id="contact">
+        <div class="contact-container scroll-reveal">
+            <div class="contact-text">
+                <h2>Parlons de votre prochain projet</h2>
+                <p>Je suis toujours à l'écoute de nouveaux défis et opportunités de collaboration.</p>
+                <div class="contact-methods">
+                    <div class="method">
+                        <i class="fas fa-envelope"></i>
+                        <span>djoboboukari35@gmail.com</span>
+                    </div>
+                    <div class="method">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Ouagadougou, Burkina Faso</span>
+                    </div>
+                </div>
+            </div>
+
+            <form action="#" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Votre Nom</label>
+                    <input type="text" id="name" placeholder="John compaoré" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Votre Email</label>
+                    <input type="email" id="email" placeholder="john@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" rows="4" placeholder="Bonjour, j'aimerais discuter..." required></textarea>
+                </div>
+                <button type="submit" class="btn primary-btn full-width">Envoyer le message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 DJOBO Cherif. Conçu avec passion.</p>
+            <div class="footer-links">
+                <a href="#accueil">Accueil</a>
+                <a href="#projets">Projets</a>
+                <a href="assets/img/cv_cherif.pdf" target="_blank">Mon CV</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script2.js"></script>
+</body>
+
+</html>
