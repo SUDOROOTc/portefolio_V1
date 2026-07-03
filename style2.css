@@ -190,6 +190,29 @@ section {
     box-shadow: 0 5px 15px rgba(243, 195, 178, 0.4);
 }
 
+.navbar .nav-cv {
+    padding: 0.5rem 1.2rem;
+    background: transparent;
+    color: var(--text-primary);
+    border: 2px solid var(--accent-main);
+    border-radius: 20px;
+    font-weight: 700;
+    transition: var(--transition-smooth);
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.navbar .nav-cv::after {
+    display: none;
+}
+
+.navbar .nav-cv:hover {
+    background: var(--accent-main);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
 .menu-icon {
     display: none;
     font-size: 1.5rem;
@@ -430,6 +453,27 @@ section {
     color: var(--accent-warm);
     transform: scale(1.3);
     filter: drop-shadow(0 5px 10px rgba(243, 195, 178, 0.4));
+}
+
+.tech-badge {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.85rem;
+    font-weight: 700;
+    font-family: 'Outfit', sans-serif;
+    color: var(--text-light);
+    background: var(--secondary-bg);
+    padding: 0.2rem 0.7rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    line-height: 1;
+}
+
+.tech-badge:hover {
+    color: var(--accent-warm);
+    transform: scale(1.3);
+    background: transparent;
 }
 
 /* =========================================
@@ -685,6 +729,35 @@ section {
     margin-right: 1.5rem;
     color: var(--text-primary);
     font-size: 1.2rem;
+}
+
+.whatsapp-link {
+    display: flex;
+    align-items: center;
+    color: var(--text-primary);
+    transition: var(--transition-smooth);
+}
+
+.whatsapp-link i {
+    width: 50px;
+    height: 50px;
+    background: var(--secondary-bg);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1.5rem;
+    font-size: 1.2rem;
+    transition: var(--transition-smooth);
+}
+
+.whatsapp-link:hover i {
+    background: #25D366;
+    color: #fff;
+}
+
+.whatsapp-link:hover span {
+    color: #25D366;
 }
 
 .contact-form input,
