@@ -531,6 +531,27 @@ section {
     margin-bottom: 1rem;
 }
 
+.status-badge {
+    background: var(--accent-warm);
+    color: #fff;
+    padding: 0.15rem 0.6rem;
+    border-radius: 50px;
+    font-size: 0.65rem;
+    margin-left: 0.5rem;
+    vertical-align: middle;
+    letter-spacing: 1px;
+    display: inline-block;
+}
+
+.private-repo-text {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+}
+
 .projet-card h3 {
     font-size: 1.7rem;
     margin-bottom: 1rem;
