@@ -384,8 +384,8 @@ section {
    ========================================= */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+    gap: 2rem;
 }
 
 .skill-card {
@@ -481,8 +481,8 @@ section {
    ========================================= */
 .projets-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-    gap: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(380px, 100%), 1fr));
+    gap: 2rem;
 }
 
 .projet-card {
@@ -519,7 +519,7 @@ section {
 }
 
 .card-content {
-    padding: 2.5rem;
+    padding: 1.8rem;
 }
 
 .card-meta {
@@ -621,8 +621,8 @@ section {
 
 .video-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+    gap: 2rem;
 }
 
 .video-card {
@@ -1149,10 +1149,10 @@ section {
     /* Expertise */
     .skills-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
+        gap: 1.2rem;
     }
 
-    .skill-card { padding: 2rem 1.5rem; }
+    .skill-card { padding: 1.5rem 1rem; }
 
     /* Expérience */
     .exp-card { gap: 1rem; }
@@ -1235,11 +1235,8 @@ section {
     }
 
     /* Expertise */
-    .skills-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .skill-card { padding: 1.8rem 1.2rem; }
+    .skills-grid { grid-template-columns: 1fr; }
+    .skill-card { padding: 1.5rem 1rem; }
 
     /* Expérience */
     .exp-left { display: none; }
