@@ -714,6 +714,154 @@ section {
     color: #fff;
 }
 
+.certif-desc {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-top: 0.3rem;
+    line-height: 1.5;
+}
+
+/* =========================================
+   EXPERIENCE SECTION
+   ========================================= */
+.experience-container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.exp-card {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.exp-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.exp-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--accent-main);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.exp-line {
+    width: 2px;
+    flex: 1;
+    background: var(--secondary-bg);
+    margin-top: 0.5rem;
+}
+
+.exp-content {
+    background: #fff;
+    border-radius: 20px;
+    padding: 2rem;
+    flex: 1;
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition-smooth);
+}
+
+.exp-content:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+}
+
+.exp-header h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.3rem;
+}
+
+.exp-company {
+    color: var(--accent-main);
+    font-weight: 600;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.exp-badge {
+    background: var(--secondary-bg);
+    color: var(--text-primary);
+    padding: 0.3rem 0.9rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.exp-date {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.exp-tasks {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-bottom: 1.5rem;
+}
+
+.exp-tasks li {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    padding-left: 1.2rem;
+    position: relative;
+}
+
+.exp-tasks li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--accent-main);
+}
+
+.exp-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.exp-tags span {
+    font-size: 0.8rem;
+    background: var(--secondary-bg);
+    color: var(--text-primary);
+    padding: 0.3rem 0.8rem;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.certif-desc {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-top: 0.3rem;
+    line-height: 1.5;
+}
+
 /* =========================================
    9. CONTACT SECTION
    ========================================= */
@@ -829,6 +977,70 @@ section {
 /* =========================================
    11. ANIMATIONS & MEDIA QUERIES
    ========================================= */
+/* =========================================
+   TEXT REVEAL ANIMATION
+   ========================================= */
+.text-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s cubic-bezier(0.25, 0.8, 0.25, 1),
+                transform 0.7s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.text-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.sub-heading.text-reveal {
+    transition-delay: 0.15s;
+}
+
+#hero-title {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s cubic-bezier(0.25, 0.8, 0.25, 1),
+                transform 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+#hero-title.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* =========================================
+   FADE-IN UP (scroll reveal amélioré)
+   ========================================= */
+.fade-up {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.7s cubic-bezier(0.25, 0.8, 0.25, 1),
+                transform 0.7s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Délai en cascade pour les enfants */
+.fade-up:nth-child(2) { transition-delay: 0.1s; }
+.fade-up:nth-child(3) { transition-delay: 0.2s; }
+.fade-up:nth-child(4) { transition-delay: 0.3s; }
+.fade-up:nth-child(5) { transition-delay: 0.4s; }
+.fade-up:nth-child(6) { transition-delay: 0.5s; }
+
+/* Tilt 3D — on désactive le transform CSS hover pour laisser le JS gérer */
+.projet-card {
+    will-change: transform;
+    transform-style: preserve-3d;
+}
+
+.projet-card:hover {
+    transform: none; /* Le JS prend le relais */
+    box-shadow: 0 25px 50px rgba(101, 113, 102, 0.15);
+}
+
+
 .scroll-reveal {
     opacity: 0;
     transform: translateY(40px);

@@ -13,10 +13,11 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- GSAP pour les animations avancées -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 </head>
 
 <body>
-
     <!-- Header / Navigation -->
     <header class="header">
         <a href="#" class="logo">DJOBO<span class="dot">.</span></a>
@@ -24,6 +25,7 @@
         <nav class="navbar" id="navbar">
             <a href="#accueil" class="active">Accueil</a>
             <a href="#a-propos">Expertise</a>
+            <a href="#experience">Expérience</a>
             <a href="#projets">Projets</a>
             <a href="#videos">Démos</a>
             <a href="#certifications">Certifications</a>
@@ -42,16 +44,16 @@
         <div class="accueil-container">
             <div class="accueil-content scroll-reveal">
                 <span class="badge">Disponible pour des opportunités</span>
-                <h1>Construisons des expériences <br> <span class="accent-text">Web & Mobile</span> d'exception.</h1>
+                <h1 id="hero-title">Construisons <span class="accent-text">des</span> expériences <br> <span class="accent-text">Web &amp; Mobile</span> d’exception.</h1>
                 <p class="role-description">
-                    Je suis <strong>DJOBO BOUKARI Amed Cherif</strong>, étudiant en 2ème année de Génie Logiciel.
+                    Je suis <strong>DJOBO BOUKARI Amed Cherif</strong>, étudiant en 3ème année de Génie Logiciel (Licence 3).
                     Passionné par la tech et avide de progression, je transforme chaque défi en une solution
                     <strong>innovante</strong>.
                 </p>
 
                 <div class="cta-group">
-                    <a href="#projets" class="btn primary-btn">Voir mes travaux <i class="fas fa-arrow-right"></i></a>
-                    <a href="#contact" class="btn secondary-btn">Me contacter</a>
+                    <a href="#projets" class="btn primary-btn" data-magnetic>Voir mes travaux <i class="fas fa-arrow-right"></i></a>
+                    <a href="#contact" class="btn secondary-btn" data-magnetic>Me contacter</a>
                 </div>
 
                 <div class="social-hero">
@@ -78,9 +80,9 @@
 
     <!-- Section Expertise (A Propos & Stack) -->
     <section class="a-propos" id="a-propos">
-        <div class="section-header scroll-reveal">
-            <h2 class="heading">Mon <span class="accent-text">Expertise</span></h2>
-            <p class="sub-heading">Une approche technique rigoureuse couplée à une sensibilité UX.</p>
+        <div class="section-header">
+            <h2 class="heading text-reveal">Mon <span class="accent-text">Expertise</span></h2>
+            <p class="sub-heading text-reveal">Une approche technique rigoureuse couplée à une sensibilité UX.</p>
         </div>
 
         <div class="skills-grid scroll-reveal">
@@ -98,12 +100,11 @@
             <div class="skill-card">
                 <div class="icon-box"><i class="fas fa-server"></i></div>
                 <h3>Back-End</h3>
-                <p>Logique serveur robuste et gestion de données.</p>
+                <p>Logique serveur robuste, APIs REST et gestion de données.</p>
                 <div class="tech-icons">
-                    <i class="fab fa-php" title="PHP"></i>
                     <i class="fab fa-python" title="Python"></i>
                     <i class="fas fa-database" title="SQL"></i>
-                    <span class="tech-badge" title="Django">Django</span>
+                    <span class="tech-badge" title="API REST">REST API</span>
                 </div>
             </div>
 
@@ -130,11 +131,80 @@
         </div>
     </section>
 
+    <!-- Section Expérience -->
+    <section class="experience" id="experience">
+        <div class="section-header">
+            <h2 class="heading text-reveal">Mon <span class="accent-text">Expérience</span></h2>
+            <p class="sub-heading text-reveal">Parcours professionnel et stages.</p>
+        </div>
+
+        <div class="experience-container scroll-reveal">
+            <div class="exp-card">
+                <div class="exp-left">
+                    <div class="exp-icon"><i class="fas fa-briefcase"></i></div>
+                    <div class="exp-line"></div>
+                </div>
+                <div class="exp-content">
+                    <div class="exp-header">
+                        <div>
+                            <h3>Développeur Backend Python/Django</h3>
+                            <p class="exp-company"><i class="fas fa-building"></i> NoorNextGenIT</p>
+                        </div>
+                        <span class="exp-badge">Stage</span>
+                    </div>
+                    <p class="exp-date"><i class="fas fa-calendar-alt"></i> 2025 — 2026 • Ouagadougou, Burkina Faso</p>
+                    <ul class="exp-tasks">
+                        <li>Conception et développement d'APIs REST avec Django REST Framework</li>
+                        <li>Tests unitaires et intégration avec la méthodologie TDD</li>
+                        <li>Documentation et test des endpoints avec Postman</li>
+                        <li>Participation aux revues de code et aux sprints Agile</li>
+                    </ul>
+                    <div class="exp-tags">
+                        <span>Python</span>
+                        <span>Django</span>
+                        <span>REST API</span>
+                        <span>TDD</span>
+                        <span>Postman</span>
+                    </div>
+                </div>
+            </div>
+            <div class="exp-card">
+                <div class="exp-left">
+                    <div class="exp-icon"><i class="fas fa-laptop-code"></i></div>
+                    <div class="exp-line"></div>
+                </div>
+                <div class="exp-content">
+                    <div class="exp-header">
+                        <div>
+                            <h3>Développeur Web & Mobile</h3>
+                            <p class="exp-company"><i class="fas fa-building"></i> Diaspora Holding</p>
+                        </div>
+                        <span class="exp-badge">Stage</span>
+                    </div>
+                    <p class="exp-date"><i class="fas fa-calendar-alt"></i> 2024 • Ouagadougou, Burkina Faso</p>
+                    <ul class="exp-tasks">
+                        <li>Développement de la plateforme de gestion de livraisons avec suivi en temps réel</li>
+                        <li>Implémentation des rôles utilisateurs multiples (admin, livreur, client)</li>
+                        <li>Développement de l'outil SmartScan via OCR et IA pour automatiser la saisie de bons de livraison</li>
+                        <li>Intégration d'APIs externes et gestion de base de données MySQL</li>
+                    </ul>
+                    <div class="exp-tags">
+                        <span>PHP</span>
+                        <span>Python</span>
+                        <span>MySQL</span>
+                        <span>OCR</span>
+                        <span>JavaScript</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Section Projets (Déployés / Majeurs) -->
     <section class="projets" id="projets">
-        <div class="section-header scroll-reveal">
-            <h2 class="heading">Projets <span class="accent-text">Phares</span></h2>
-            <p class="sub-heading">Une sélection de mes travaux, dont certains sont en cours de développement. Pour les
+        <div class="section-header">
+            <h2 class="heading text-reveal">Projets <span class="accent-text">Phares</span></h2>
+            <p class="sub-heading text-reveal">Une sélection de mes travaux, dont certains sont en cours de développement. Pour les
                 projets non encore déployés, des démonstrations vidéo sont disponibles ci-dessous.</p>
         </div>
 
@@ -269,9 +339,9 @@
 
     <!-- [NEW] Section Vidéos / Démos -->
     <section class="videos" id="videos">
-        <div class="section-header scroll-reveal">
-            <h2 class="heading">Démos & <span class="accent-text">Prototypes</span></h2>
-            <p class="sub-heading">Exploration de concepts et applications en cours de développement.</p>
+        <div class="section-header">
+            <h2 class="heading text-reveal">Démos & <span class="accent-text">Prototypes</span></h2>
+            <p class="sub-heading text-reveal">Exploration de concepts et applications en cours de développement.</p>
         </div>
 
         <div class="video-grid scroll-reveal">
@@ -305,26 +375,27 @@
 
     <!-- Section Certifications -->
     <section class="certifications" id="certifications">
-        <div class="section-header scroll-reveal">
-            <h2 class="heading">Certification & <span class="accent-text">Diplômes</span></h2>
+        <div class="section-header">
+            <h2 class="heading text-reveal">Certification & <span class="accent-text">Diplômes</span></h2>
         </div>
 
         <div class="certifications-container scroll-reveal">
             <div class="certif-item">
                 <div class="certif-icon"><i class="fab fa-python"></i></div>
                 <div class="certif-details">
-                    <h3>Développement python niveau intermediare a avancé</h3>
+                    <h3>Développement Python — niveau intermédiaire à avancé</h3>
                     <p class="certif-source">Udemy • 2024</p>
                     <a href="assets/img/certification_udemy_python.jpg" target="_blank" class="link-small">Voir le
                         certificat <i class="fas fa-external-link-alt"></i></a>
                 </div>
             </div>
 
+
             <div class="certif-item">
                 <div class="certif-icon"><i class="fas fa-university"></i></div>
                 <div class="certif-details">
-                    <h3>Licence 2 Génie Informatique</h3>
-                    <p class="certif-source">Université / École • En cours</p>
+                    <h3>Licence 3 Génie Informatique</h3>
+                    <p class="certif-source">En cours • 2025</p>
                 </div>
             </div>
         </div>
@@ -334,8 +405,8 @@
     <section class="contact" id="contact">
         <div class="contact-container scroll-reveal">
             <div class="contact-text">
-                <h2>Parlons de votre prochain projet</h2>
-                <p>Je suis toujours à l'écoute de nouveaux défis et opportunités de collaboration.</p>
+                <h2 class="text-reveal">Parlons de votre prochain projet</h2>
+                <p class="text-reveal">Je suis toujours à l'écoute de nouveaux défis et opportunités de collaboration.</p>
                 <div class="contact-methods">
                     <div class="method">
                         <i class="fas fa-envelope"></i>
@@ -354,20 +425,16 @@
                 </div>
             </div>
 
-            <form action="#" class="contact-form">
+            <form action="#" class="contact-form" id="contact-form">
                 <div class="form-group">
                     <label for="name">Votre Nom</label>
-                    <input type="text" id="name" placeholder="John compaoré" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Votre Email</label>
-                    <input type="email" id="email" placeholder="john@example.com" required>
+                    <input type="text" id="name" placeholder="John Compaoré" required>
                 </div>
                 <div class="form-group">
                     <label for="message">Message</label>
                     <textarea id="message" rows="4" placeholder="Bonjour, j'aimerais discuter..." required></textarea>
                 </div>
-                <button type="submit" class="btn primary-btn full-width">Envoyer le message</button>
+                <button type="submit" class="btn primary-btn full-width"><i class="fab fa-whatsapp"></i> Envoyer sur WhatsApp</button>
             </form>
         </div>
     </section>
